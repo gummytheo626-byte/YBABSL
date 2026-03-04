@@ -1,0 +1,85 @@
+body { 
+    font-family: 'Helvetica', Arial, sans-serif;
+    background: #2c3e50; 
+    color: white; 
+    margin: 0;
+    min-height: 100vh; /* CHANGED: "min-height" let's the page grow if there's more text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;  /* CHANGED: This allows scrolling up and down only when needed */
+}
+
+#section-title { 
+    padding: 15px 0; /* Changed margin to padding for a taller blue bar */
+    background-color: #3c6ae7;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* This stacks the Title and Link vertically */
+    align-items: center;
+    gap: 10px; /* Adds a nice gap between the H1 and the Link */
+    border-bottom: solid 10px #19337b;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#sectionTitleH1{
+font-size: 48pt;
+text-shadow: 0px 4px 1px black;
+}
+
+#LinkNav {
+    text-decoration: none;
+    color: white; /* Makes sure the link isn't default purple/blue */
+    position: relative;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+/* This creates the invisible line before you hover */
+#LinkNav::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #6191ff; /* A lighter blue so it shows up on the dark bar */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* This grows the line to 100% when you hover over it */
+#LinkNav:hover::after {
+    width: 100%;
+}
+
+#LinkNavSpec{
+        text-decoration: none;
+    color: white; /* Makes sure the link isn't default purple/blue */
+    position: relative;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+#LinkNavSpec::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #6191ff; /* A lighter blue so it shows up on the dark bar */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+#LinkNavSpec:hover::after {
+    width: 100%;
+}
+
+#LinkNavSpec:hover{
+    cursor: help;
+}
+
+#MainContent {
+    font-size: 16pt;
+}
