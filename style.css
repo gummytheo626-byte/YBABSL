@@ -82,4 +82,9 @@ text-shadow: 0px 4px 1px black;
 
 #MainContent {
     font-size: 16pt;
+    width: 95%;          /* This handles the mobile/tablet side */
+    max-width: 1400px;    /* This handles the desktop side */
+    margin: 40px auto;    /* This keeps it centered and adds space at the top/bottom */
+    padding: 20px;       /* This prevents text from touching the screen edges on mobile */
+    box-sizing: border-box; /* This keeps the math simple so the box doesn't break */
 }
